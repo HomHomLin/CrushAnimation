@@ -6,6 +6,7 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.PointF;
 import android.view.View;
+import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
 
 /**
@@ -16,8 +17,14 @@ public final class CrushAnimation {
     private CrushAnimation(){}
 
     public static void crushView(View view){
-//        ObjectAnimator animator = ObjectAnimator.ofFloat(view.getContext(), "translationX", 10, 20, 5, 10, 0);
-//        animator.setTarget(view);
+        view.setTranslationX(50);
+        view.setTranslationX(-100);
+        view.setTranslationX(100);
+        view.setTranslationX(-100);
+        view.setTranslationX(100);
+        view.setTranslationX(-100);
+
+
 //        animator.setDuration(3000);
 //        animator.setRepeatMode(ValueAnimator.REVERSE);
 //        animator.start();
